@@ -1,0 +1,8 @@
+{% extends "head_section.html" %}
+{% block content %}
+    {% for product in products %}
+        <h1>{{ product.title }}</h1>
+        <p>{{ product.date_created }}</p>
+        <p>{{ product.content }}</p>
+    {% endfor %}
+{% endblock content %}
