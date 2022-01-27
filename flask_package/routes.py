@@ -1,8 +1,6 @@
-from flask import Flask, render_template, redirect, flash, url_for
-from forms import RegistrationForm, LoginForm
-
-app = Flask(__name__)
-app.config["SECRET_KEY"] = "9719f550df7a634f5482f7d8b6a2853112e55095"  # Cookies data
+from flask import render_template, redirect, flash, url_for
+from flask_package import app
+from flask_package.forms import RegistrationForm, LoginForm
 
 products = [
     {
@@ -53,7 +51,3 @@ def products_page():
 @app.route("/cart")
 def cart_page():
     return None
-
-
-if __name__ == "__main__":
-    app.run(debug=True)
